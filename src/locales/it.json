@@ -8,7 +8,7 @@
     "headers": {
       "crest": "Stemma",
       "location": "Località",
-      "amount": "Importo",
+      "amount": "Quantità",
       "deadline": "Scadenza",
       "view": "Visualizza"
     },

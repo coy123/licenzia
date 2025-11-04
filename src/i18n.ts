@@ -30,7 +30,7 @@ export const translations: Record<Language, Translations> = {
   it: itTranslations,
 };
 
-export const defaultLanguage: Language = 'en';
+export const defaultLanguage: Language = 'it';
 
 export const getTranslation = (language: Language, key: string): string => {
   const keys = key.split('.');
