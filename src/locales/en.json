@@ -1,0 +1,21 @@
+{
+  "dashboard": {
+    "title": "License Dashboard",
+    "subtitle": "View and manage your license portfolio"
+  },
+  "table": {
+    "title": "Licenses",
+    "headers": {
+      "crest": "Crest",
+      "location": "Location",
+      "amount": "Amount",
+      "deadline": "Deadline",
+      "view": "View"
+    },
+    "loading": "Loading data...",
+    "lastUpdated": "Last updated"
+  },
+  "language": {
+    "switch": "Language"
+  }
+}

@@ -1,0 +1,51 @@
+[
+  {
+    "image": "https://picsum.photos/seed/logo1/40/40.jpg",
+    "location": "Casoria",
+    "amount": 18,
+    "deadline": "2025-06-01",
+    "url": "https://comune.casoria.na.it/wp-content/uploads/2025/06/COMUNE_DI_CASORIA_BANDO_18_LICENZE_BANDI_DI_GARA-BURC.pdf"
+  },
+  {
+    "image": "https://picsum.photos/seed/logo2/40/40.jpg",
+    "location": "Candelo",
+    "amount": 1,
+    "deadline": "2025-04-01",
+    "url": "https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.comune.candelo.bi.it/po/attachment_news.php%3Fid%3D932&ved=2ahUKEwi4l7quo9SQAxWIh_0HHR9uKrcQFnoECC8QAQ&usg=AOvVaw3flQxhe6zrBikzhRJooPiS"
+  },
+  {
+    "image": "https://picsum.photos/seed/logo3/40/40.jpg",
+    "location": "Cavriglia",
+    "amount": 8,
+    "deadline": "2025-04-01",
+    "url": "https://www.artigianiarezzo.it/content/uploads/2025/03/bando-cavriglia-1.pdf"
+  },
+  {
+    "image": "https://picsum.photos/seed/logo4/40/40.jpg",
+    "location": "Ora San Giulio",
+    "amount": 2,
+    "deadline": "2025-10-01",
+    "url": "https://www.comune.ortasangiulio.no.it/Dettaglibandi?ID=78718-1&utm"
+  },
+  {
+    "image": "https://picsum.photos/seed/logo5/40/40.jpg",
+    "location": "Impruneta",
+    "amount": 3,
+    "deadline": "2025-07-01",
+    "url": "https://www.comune.impruneta.fi.it/it/news/pubblicato-il-bando-per-tre-nuove-autorizzazioni-ncc?utm_source=chatgpt.com"
+  },
+  {
+    "image": "https://picsum.photos/seed/logo6/40/40.jpg",
+    "location": "Lecco",
+    "amount": 2,
+    "deadline": "2025-03-01",
+    "url": "https://www.comune.lecco.it/Novita/Comunicati/Noleggio-con-conducente-online-il-bando?utm_source=chatgpt.com"
+  },
+  {
+    "image": "https://picsum.photos/seed/logo7/40/40.jpg",
+    "location": "Francavilla",
+    "amount": 1,
+    "deadline": "2025-11-04",
+    "url": "https://www.comune.francavillafontana.br.it/Novita/Avvisi/Bando-di-pubblico-concorso-per-soli-titoli-per-l-assegnazione-n.-9-autorizzazioni-NCC"
+  }
+]

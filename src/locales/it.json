@@ -1,0 +1,21 @@
+{
+  "dashboard": {
+    "title": "Pannello Licenze",
+    "subtitle": "Visualizza e gestisci il tuo portafoglio di licenze"
+  },
+  "table": {
+    "title": "Licenze",
+    "headers": {
+      "crest": "Stemma",
+      "location": "Località",
+      "amount": "Importo",
+      "deadline": "Scadenza",
+      "view": "Visualizza"
+    },
+    "loading": "Caricamento dati...",
+    "lastUpdated": "Ultimo aggiornamento"
+  },
+  "language": {
+    "switch": "Lingua"
+  }
+}
