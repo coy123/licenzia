@@ -1,48 +1,48 @@
 [
   {
-    "image": "https://picsum.photos/seed/logo1/40/40.jpg",
+    "image": "https://upload.wikimedia.org/wikipedia/en/thumb/a/ad/Casoria-Stemma.png/250px-Casoria-Stemma.png",
     "location": "Casoria",
     "amount": 18,
     "deadline": "2025-06-01",
     "url": "https://comune.casoria.na.it/wp-content/uploads/2025/06/COMUNE_DI_CASORIA_BANDO_18_LICENZE_BANDI_DI_GARA-BURC.pdf"
   },
   {
-    "image": "https://picsum.photos/seed/logo2/40/40.jpg",
+    "image": "https://upload.wikimedia.org/wikipedia/en/thumb/7/73/Candelo.gif/250px-Candelo.gif",
     "location": "Candelo",
     "amount": 1,
     "deadline": "2025-04-01",
     "url": "https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.comune.candelo.bi.it/po/attachment_news.php%3Fid%3D932&ved=2ahUKEwi4l7quo9SQAxWIh_0HHR9uKrcQFnoECC8QAQ&usg=AOvVaw3flQxhe6zrBikzhRJooPiS"
   },
   {
-    "image": "https://picsum.photos/seed/logo3/40/40.jpg",
+    "image": "https://upload.wikimedia.org/wikipedia/en/thumb/5/52/Cavriglia-Stemma.png/250px-Cavriglia-Stemma.png",
     "location": "Cavriglia",
     "amount": 8,
     "deadline": "2025-04-01",
     "url": "https://www.artigianiarezzo.it/content/uploads/2025/03/bando-cavriglia-1.pdf"
   },
   {
-    "image": "https://picsum.photos/seed/logo4/40/40.jpg",
-    "location": "Ora San Giulio",
+    "image": "https://www.comune.ortasangiulio.no.it/portals/2101/Skins/skinXhtml/Images/stemma.webp",
+    "location": "Orta San Giulio",
     "amount": 2,
     "deadline": "2025-10-01",
     "url": "https://www.comune.ortasangiulio.no.it/Dettaglibandi?ID=78718-1&utm"
   },
   {
-    "image": "https://picsum.photos/seed/logo5/40/40.jpg",
+    "image": "https://impruneta-api.municipiumapp.it/s3/150x150/s3/20008/sito/stemma.jpg",
     "location": "Impruneta",
     "amount": 3,
     "deadline": "2025-07-01",
     "url": "https://www.comune.impruneta.fi.it/it/news/pubblicato-il-bando-per-tre-nuove-autorizzazioni-ncc?utm_source=chatgpt.com"
   },
   {
-    "image": "https://picsum.photos/seed/logo6/40/40.jpg",
+    "image": "https://flyimg.opencityitalia.it/upload/rf_1,o_auto,w_2500,h_2500/https%3A%2F%2Fs3-eu-west-1.amazonaws.com%2Fstatic.opencity.opencontent.it%2Fvar%2Flecco%2Fstorage%2Fimages%2F3780-84-ita-IT%2FHomepage_header_logo.png",
     "location": "Lecco",
     "amount": 2,
     "deadline": "2025-03-01",
     "url": "https://www.comune.lecco.it/Novita/Comunicati/Noleggio-con-conducente-online-il-bando?utm_source=chatgpt.com"
   },
   {
-    "image": "https://picsum.photos/seed/logo7/40/40.jpg",
+    "image": "https://static.comune.francavillafontana.br.it/upload/rf_1,o_auto,w_2500,h_2500/http%3A%2F%2Fminio%3A9000%2Fopencity-bucket%2Fvar%2Fopencity%2Fstorage%2Fimages%2F4348-17-ita-IT%2FHomepage_header_logo.png",
     "location": "Francavilla",
     "amount": 1,
     "deadline": "2025-11-04",
