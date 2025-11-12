@@ -30,7 +30,7 @@ const TableRow: React.FC<TableRowProps> = ({data}) => (
             />
         </div>
 
-        <div className="p-2 flex-1 min-w-[10ch]">
+        <div className="p-2 flex-1 min-w-[15ch]">
             <p className="text-white break-words">{data.location}</p>
         </div>
 
@@ -62,6 +62,13 @@ interface TableProps {
 const Table: React.FC<TableProps> = ({data}) => {
     const {language} = useLanguage();
     const t = (key: string) => getTranslation(language, key);
+    const sortedData = React.useMemo(() => {
+        return [...data].sort((a, b) => {
+            const deadlineA = new Date(a.deadline).getTime();
+            const deadlineB = new Date(b.deadline).getTime();
+            return deadlineB - deadlineA;
+        });
+    }, [data]);
     return (
         <div className="w-full bg-gray-700 rounded-lg shadow-md overflow-hidden">
         <div className="flex items-center bg-gray-600 border-b border-gray-500 font-semibold text-gray-200 text-xs sm:text-sm">
@@ -70,7 +77,7 @@ const Table: React.FC<TableProps> = ({data}) => {
                 <span className="hidden sm:inline text-gray-200">{t('table.headers.crest')}</span>
             </div>
 
-            <div className="p-2 flex-1 min-w-[10ch] flex items-center justify-start">
+            <div className="p-2 flex-1 min-w-[15ch] flex items-center justify-start">
                 <span className="sm:hidden text-base" aria-hidden>📍</span>
                 <span className="hidden sm:inline text-gray-200">{t('table.headers.location')}</span>
             </div>
@@ -92,7 +99,7 @@ const Table: React.FC<TableProps> = ({data}) => {
             </div>
 
             <div className="divide-y divide-gray-600">
-                {data.map((row, index) => (
+                {sortedData.map((row, index) => (
                     <TableRow key={index} data={row}/>
                 ))}
             </div>
