@@ -22,7 +22,7 @@ const formatAmount = (amount: number) => {
 
 const TableRow: React.FC<TableRowProps> = ({data}) => (
     <div className="flex items-center border-b border-gray-600 hover:bg-gray-600 transition-colors min-h-[4.5rem]">
-        <div className="flex-auto p-2">
+        <div className="p-2 w-12 sm:w-16 flex items-center justify-center">
             <img
                 src={data.image}
                 alt="Crest"
@@ -30,24 +30,24 @@ const TableRow: React.FC<TableRowProps> = ({data}) => (
             />
         </div>
 
-        <div className="flex-auto p-2 w-16">
-            <p className="text-white">{data.location}</p>
+        <div className="p-2 flex-1 min-w-[10ch]">
+            <p className="text-white break-words">{data.location}</p>
         </div>
 
-        <div className="flex-auto p-2">
+        <div className="p-2 w-14 sm:w-24 flex justify-end">
             <p className="text-green-400 text-right">{formatAmount(data.amount)}</p>
         </div>
 
-        <div className="flex-auto p-2 w-8">
+        <div className="p-2 w-20 sm:w-28 flex justify-end">
             <p className="text-sm text-gray-300 text-right">{formatDate(data.deadline)}</p>
         </div>
 
-        <div className="p-2">
+        <div className="p-2 w-14 sm:w-24 flex justify-end">
             <a
                 href={data.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-3 py-1.5 bg-blue-600 text-white text-sm font-medium rounded hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors w-full"
+                className="inline-flex items-center justify-center px-3 py-1.5 bg-blue-600 text-white text-sm font-medium rounded hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors w-full sm:w-auto"
             >
                 View
             </a>
@@ -64,26 +64,31 @@ const Table: React.FC<TableProps> = ({data}) => {
     const t = (key: string) => getTranslation(language, key);
     return (
         <div className="w-full bg-gray-700 rounded-lg shadow-md overflow-hidden">
-            <div className="flex items-center bg-gray-600 border-b border-gray-500 font-semibold text-gray-200">
-                <div className="flex-auto p-2">
-                    <span className="text-sm text-gray-200">{t('table.headers.crest')}</span>
-                </div>
+        <div className="flex items-center bg-gray-600 border-b border-gray-500 font-semibold text-gray-200 text-xs sm:text-sm">
+            <div className="p-2 w-12 sm:w-16 flex items-center justify-center sm:justify-start">
+                <span className="sm:hidden text-base" aria-hidden>🛡️</span>
+                <span className="hidden sm:inline text-gray-200">{t('table.headers.crest')}</span>
+            </div>
 
-                <div className="flex-auto p-2 w-16">
-                    <span className="text-sm text-gray-200 text-right">{t('table.headers.location')}</span>
-                </div>
+            <div className="p-2 flex-1 min-w-[10ch] flex items-center justify-start">
+                <span className="sm:hidden text-base" aria-hidden>📍</span>
+                <span className="hidden sm:inline text-gray-200">{t('table.headers.location')}</span>
+            </div>
 
-                <div className="flex-auto p-2">
-                    <p className="text-sm text-green-400 text-right">{t('table.headers.amount')}</p>
-                </div>
+            <div className="p-2 w-14 sm:w-24 flex items-center justify-end">
+                <span className="sm:hidden text-base text-green-400" aria-hidden>#</span>
+                <span className="hidden sm:inline text-green-400 text-right">{t('table.headers.amount')}</span>
+            </div>
 
-                <div className="flex-auto p-2 w-8">
-                    <p className="text-sm text-gray-300 text-right">{t('table.headers.deadline')}</p>
-                </div>
+            <div className="p-2 w-20 sm:w-28 flex items-center justify-end">
+                <span className="sm:hidden text-base text-gray-300" aria-hidden>📅</span>
+                <span className="hidden sm:inline text-gray-300 text-right">{t('table.headers.deadline')}</span>
+            </div>
 
-                <div className="p-2">
-                    <span className="text-sm text-gray-200">{t('table.headers.view')}</span>
-                </div>
+            <div className="p-2 w-14 sm:w-24 flex items-center justify-end">
+                <span className="sm:hidden text-base" aria-hidden>🔗</span>
+                <span className="hidden sm:inline text-gray-200">{t('table.headers.view')}</span>
+            </div>
             </div>
 
             <div className="divide-y divide-gray-600">
