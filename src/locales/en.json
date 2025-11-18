@@ -1,14 +1,15 @@
 {
   "dashboard": {
-    "title": "License Dashboard",
-    "subtitle": "View and manage your license portfolio"
+    "title": "All Italian NCC licenses, in one place",
+    "subtitle": "Quickly find the latest NCC licenses, city by city",
+    "description": "This platform collects and organizes every NCC tender published in Italy, including active, expired, and upcoming ones. Each tender is indexed with date, number of licenses, official link, and source so you can immediately see what's open, what has closed, and what might reopen. Let’s find the right tender together."
   },
   "table": {
     "title": "Licenses",
     "headers": {
-      "crest": "Crest",
+      "crest": "Municipality",
       "location": "Location",
-      "amount": "Amount",
+      "amount": "No. of Licenses",
       "deadline": "Deadline",
       "view": "View"
     },

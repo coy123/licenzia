@@ -61,15 +61,15 @@ const AppContent: React.FC = () => {
           <h1 className="text-2xl sm:text-3xl font-bold text-white mb-2">
             {t('dashboard.title')}
           </h1>
-          <p className="text-sm sm:text-base text-gray-300">
+          <p className="text-sm sm:text-base text-gray-300 mb-3">
             {t('dashboard.subtitle')}
+          </p>
+          <p className="text-sm sm:text-base text-gray-400">
+            {t('dashboard.description')}
           </p>
         </div>
         <div className="bg-gray-700 rounded-lg shadow-sm p-4 sm:p-6">
-          <div className="mb-4 flex flex-col sm:flex-row sm:items-center sm:justify-between">
-            <h2 className="text-lg sm:text-xl font-semibold text-white mb-2 sm:mb-0">
-              {`${t('table.title')} (${tableData.length})`}
-            </h2>
+          <div className="mb-4 flex justify-end">
             <div className="text-sm text-gray-400">
               {`${t('table.lastUpdated')}: ${new Date().toLocaleDateString('en-GB')}`}
             </div>

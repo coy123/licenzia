@@ -27,7 +27,7 @@ const TableRow: React.FC<TableRowProps> = ({data}) => {
 
     return (
         <div className={`flex items-center border-b border-gray-600 ${hoverBackgroundClass} transition-colors min-h-[4.5rem] ${backgroundClass}`}>
-            <div className="p-2 w-12 sm:w-16 flex items-center justify-center">
+        <div className="p-2 w-16 sm:w-24 flex items-center justify-center">
                 <img
                     src={data.image}
                     alt="Crest"
@@ -35,19 +35,19 @@ const TableRow: React.FC<TableRowProps> = ({data}) => {
                 />
             </div>
 
-            <div className="p-2 flex-1 min-w-[15ch]">
-                <p className="text-white break-words">{data.location}</p>
+        <div className="p-2 flex-1 min-w-[15ch] flex items-center justify-center sm:justify-start">
+            <p className="text-white break-words text-center sm:text-left">{data.location}</p>
             </div>
 
-            <div className="p-2 w-14 sm:w-24 flex justify-end">
-                <p className="text-yellow-500 text-right">{formatAmount(data.amount)}</p>
+        <div className="p-2 w-14 sm:w-24 flex justify-center sm:justify-end">
+            <p className="text-green-400 text-center sm:text-right">{formatAmount(data.amount)}</p>
             </div>
 
-            <div className="p-2 w-20 sm:w-28 flex justify-end">
-                <p className="text-sm text-gray-300 text-right">{formatDate(data.deadline)}</p>
+        <div className="p-2 w-20 sm:w-28 flex justify-center">
+            <p className="text-sm text-gray-300 text-center">{formatDate(data.deadline)}</p>
             </div>
 
-            <div className="p-2 w-14 sm:w-24 flex justify-end">
+        <div className="p-2 w-14 sm:w-24 flex justify-center">
                 <a
                     href={data.url}
                     target="_blank"
@@ -78,27 +78,27 @@ const Table: React.FC<TableProps> = ({data}) => {
     return (
         <div className="w-full bg-gray-700 rounded-lg shadow-md overflow-hidden">
         <div className="flex items-center bg-gray-600 border-b border-gray-500 font-semibold text-gray-200 text-xs sm:text-sm">
-            <div className="p-2 w-12 sm:w-16 flex items-center justify-center sm:justify-start">
+            <div className="p-2 w-16 sm:w-24 flex items-center sm:justify-center">
                 <span className="sm:hidden text-base" aria-hidden>🛡️</span>
                 <span className="hidden sm:inline text-gray-200">{t('table.headers.crest')}</span>
             </div>
 
-            <div className="p-2 flex-1 min-w-[15ch] flex items-center justify-start">
+            <div className="p-2 flex-1 min-w-[15ch] flex items-center justify-center sm:justify-start">
                 <span className="sm:hidden text-base" aria-hidden>📍</span>
                 <span className="hidden sm:inline text-gray-200">{t('table.headers.location')}</span>
             </div>
 
             <div className="p-2 w-14 sm:w-24 flex items-center justify-end">
                 <span className="sm:hidden text-base text-green-400" aria-hidden>#</span>
-                <span className="hidden sm:inline text-green-400 text-right">{t('table.headers.amount')}</span>
+                <span className="hidden sm:inline text-green-400 text-center sm:text-right">{t('table.headers.amount')}</span>
             </div>
 
-            <div className="p-2 w-20 sm:w-28 flex items-center justify-end">
+            <div className="p-2 w-20 sm:w-28 flex items-center justify-center">
                 <span className="sm:hidden text-base text-gray-300" aria-hidden>📅</span>
                 <span className="hidden sm:inline text-gray-300 text-right">{t('table.headers.deadline')}</span>
             </div>
 
-            <div className="p-2 w-14 sm:w-24 flex items-center justify-end">
+            <div className="p-2 w-14 sm:w-24 flex items-center sm:justify-center">
                 <span className="sm:hidden text-base" aria-hidden>🔗</span>
                 <span className="hidden sm:inline text-gray-200">{t('table.headers.view')}</span>
             </div>
