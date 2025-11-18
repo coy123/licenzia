@@ -2,7 +2,13 @@ import React from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
 
 const LanguageSwitcher: React.FC = () => {
-  if (import.meta.env.PROD) {
+  const isDevEnvironment =
+    typeof window !== 'undefined' &&
+    (window.location.hostname === 'localhost' ||
+      window.location.hostname === '127.0.0.1' ||
+      window.location.hostname === '[::1]');
+
+  if (!isDevEnvironment) {
     return null;
   }
   const { language, setLanguage } = useLanguage();
