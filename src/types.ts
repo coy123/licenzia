@@ -4,4 +4,6 @@ export interface TableData {
   amount: number;
   deadline: string;
   url: string;
+  latitude?: number;
+  longitude?: number;
 }

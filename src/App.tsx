@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Table from './components/Table';
 import LanguageSwitcher from './components/LanguageSwitcher';
+import MapView from './components/MapView';
 import { LanguageProvider } from './contexts/LanguageContext';
 import { TableData } from './types';
 import { useLanguage } from './contexts/LanguageContext';
@@ -12,6 +13,7 @@ const AppContent: React.FC = () => {
   const [tableData, setTableData] = useState<TableData[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [activeTab, setActiveTab] = useState<'table' | 'map'>('table');
 
   const t = (key: string) => getTranslation(language, key);
 
@@ -69,12 +71,28 @@ const AppContent: React.FC = () => {
           </p>
         </div>
         <div className="bg-gray-700 rounded-lg shadow-sm p-4 sm:p-6">
-          <div className="mb-4 flex justify-end">
-            <div className="text-sm text-gray-400">
-              {`${t('table.lastUpdated')}: ${new Date().toLocaleDateString('en-GB')}`}
+          <div className="mb-4">
+            <div className="w-full rounded-lg bg-gray-800 p-1 flex">
+              {(['table', 'map'] as const).map((tab) => {
+                const isActive = activeTab === tab;
+                return (
+                  <button
+                    key={tab}
+                    type="button"
+                    onClick={() => setActiveTab(tab)}
+                    className={`flex-1 px-4 py-2 text-sm font-medium rounded-md transition-colors ${
+                      isActive
+                        ? 'bg-blue-600 text-white shadow-sm'
+                        : 'text-gray-300 hover:text-white'
+                    }`}
+                  >
+                    {t(`dashboard.tabs.${tab}`)}
+                  </button>
+                );
+              })}
             </div>
           </div>
-          <Table data={tableData}/>
+          {activeTab === 'table' ? <Table data={tableData}/> : <MapView data={tableData}/>}
         </div>
       </div>
     </div>
