@@ -7,9 +7,9 @@ interface TableRowProps {
     data: TableData;
 }
 
-const formatDate = (dateString: string) => {
+const formatDate = (dateString: string, locale: string = 'en-GB') => {
     const date = new Date(dateString);
-    return date.toLocaleDateString('en-GB', {
+    return date.toLocaleDateString(locale, {
         year: 'numeric',
         month: 'short',
         day: 'numeric'
@@ -21,6 +21,9 @@ const formatAmount = (amount: number) => {
 };
 
 const TableRow: React.FC<TableRowProps> = ({data}) => {
+    const {language} = useLanguage();
+    const t = (key: string) => getTranslation(language, key);
+    const locale = language === 'it' ? 'it-IT' : 'en-GB';
     const isDeadlineUpcoming = new Date(data.deadline).getTime() >= Date.now();
     const backgroundClass = isDeadlineUpcoming ? 'bg-green-900/40' : 'bg-gray-900/20';
     const hoverBackgroundClass = isDeadlineUpcoming ? 'hover:bg-green-800' : 'hover:bg-gray-600';
@@ -44,7 +47,7 @@ const TableRow: React.FC<TableRowProps> = ({data}) => {
             </div>
 
         <div className="p-2 w-20 sm:w-28 flex justify-center">
-            <p className="text-sm text-gray-300 text-center">{formatDate(data.deadline)}</p>
+            <p className="text-sm text-gray-300 text-center">{formatDate(data.deadline, locale)}</p>
             </div>
 
         <div className="p-2 w-14 sm:w-24 flex justify-center">
@@ -53,8 +56,14 @@ const TableRow: React.FC<TableRowProps> = ({data}) => {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center justify-center px-3 py-1.5 bg-blue-600 text-white text-sm font-medium rounded hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors w-full sm:w-auto"
+                    aria-label={t('table.headers.view')}
                 >
-                    View
+                    <span className="sm:hidden" aria-hidden>
+                        🔍
+                    </span>
+                    <span className="hidden sm:inline">
+                        {t('table.headers.view')}
+                    </span>
                 </a>
             </div>
         </div>
