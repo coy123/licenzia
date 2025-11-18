@@ -2,6 +2,9 @@ import React from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
 
 const LanguageSwitcher: React.FC = () => {
+  if (import.meta.env.PROD) {
+    return null;
+  }
   const { language, setLanguage } = useLanguage();
 
   const toggleLanguage = () => {
